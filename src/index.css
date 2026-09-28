@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-display: 'Italiana', 'Cormorant Garamond', serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #F3F7FA;
+    color: #121D28;
+  }
+}
+
+.font-serif-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-display-luxury {
+  font-family: 'Italiana', 'Cormorant Garamond', serif;
+}
+
+.font-sans-modern {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom scrollbar in soft porcelain blue */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3F7FA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBDDE9;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A9C8DC;
+}
+
+/* Subtle luxury grain effect with airy blue tint */
+.bg-grain {
+  background-image: radial-gradient(rgba(30, 60, 90, 0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.bg-grain-dark {
+  background-image: radial-gradient(rgba(180, 215, 240, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Hide scrollbar for clean carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Left-to-right infinite sliding review marquee */
+@keyframes slide-left-to-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-slide-ltr {
+  display: flex;
+  width: max-content;
+  animation: slide-left-to-right 40s linear infinite;
+  will-change: transform;
+}
+
+.animate-slide-ltr.paused {
+  animation-play-state: paused;
+}
+
+@media (hover: hover) {
+  .animate-slide-ltr:hover {
+    animation-play-state: paused;
+  }
+}

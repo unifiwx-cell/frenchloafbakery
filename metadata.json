@@ -1,0 +1,6 @@
+{
+  "name": "French Loaf Bakery & Cafe",
+  "description": "Premium editorial website for French Loaf Bakery & Cafe in Sector-V, Kolkata — artisan pastries, Korean buns, celebration cakes, and specialty coffee.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
